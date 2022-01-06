@@ -1,84 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+const LIGHT = '#E5E5E5';
+const DARK = '#707070';
+const body = document.querySelector('body');
+const array = document.querySelectorAll('div');
 
-  const LIGHT = '#E5E5E5';
-  const DARK = '#707070';
-  const body = document.querySelector('body');
-
-// Dark mode
-
-function darkMode(status) {
-
-  if (status) {
-    // activate darkmode
-    const divs = document.querySelectorAll('div');
-    const images = document.querySelectorAll('img');
-    const p = document.querySelectorAll('p');
-    const h1 = document.querySelectorAll('h1');
-    const h2 = document.querySelectorAll('h2');
-    const h3 = document.querySelectorAll('h3');
-    const h4 = document.querySelectorAll('h4');
-    const h5 = document.querySelectorAll('h5');
-    const h6 = document.querySelectorAll('h6');
-
-    body.style.backgroundColor = DARK;
-    body.style.color = LIGHT;
-    divs.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    divs.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    images.forEach(e => {
-      e.opacity = 0.8;
-    });
-    p.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    h1.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    h2.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    h3.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    h4.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-    h5.forEach(e => {
-      e.backgroundColor = DARK;
-      e.color = LIGHT;
-    });
-  } else {
-    // deactivate darkmode
-    console.log('deactivate');
-  }
+body.style.backgroundColor = DARK;
+body.style.color = LIGHT;
+for (const e of array) {
+  e.backgroundColor = DARK;
+  e.color = LIGHT;
 }
-
-
-
 
 // Night mode
 const overlay = document.createElement('div')
 overlay.setAttribute('id','overlay')
 body.appendChild(overlay);
 
- 
+function overlayOn (click){
+    
+    //If click === true, set display to block
+    if(click === true){
+        overlay.style.display = 'block'
+        //Else if click === false, set display to none
+    } else if (click === false){
+        overlay.style.display = 'none'
+    }
+}
 
 
 
-// Remove distractions / block websites from list
+// // Remove distractions / block websites from list
+const button = document.getElementById('btn');
+
+button.addEventListener('click', function (){
+    overlayOn(true);
+    console.log('click');
+})
 
 
+
+// });
 
 });
-
-

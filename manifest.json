@@ -1,21 +1,13 @@
 {
-  "manifest_version": 3,
-  "name": "Focus Mode",
-  "version": "1.0",
-  "browser_action": {
-    "default_icon": "",
-    "default_popup": "index.html"
-   },
-  "content_scripts": [
-    {
-      "js": ["./main.js"]
-    }
-  ],
-  "background": {
-    "service_worker": "main.js"
-  },
-  "permissions": [
-    "activeTab",
-    "storage"
+    "manifest_version": 2,
+    "name": "Focus Mode",
+    "version": "1",
+    "description": "Helps increase focus duration",
+    "permissions": [],
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "permissions":[
+        "activeTab"
     ]
-}
+   }
