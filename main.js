@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const body = document.querySelector('body');
     const head = document.querySelector('head')
-    
     const link = document.createElement('link');
-
     link.setAttribute('href','./style.css');
     link.setAttribute('rel','stylesheet');
-    
     head.appendChild(link);
-
-
+    
     // Night mode
     const overlay = document.createElement('div')
     overlay.setAttribute('id','overlay')
@@ -27,7 +23,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     
     
-    const button = document.getElementById('btn');
+    const button = document.createElement('button');
+    button.setAttribute('id','btn');
+    button.setAttribute('id','btn');
+    
+    body.appendChild(button)
     
     let bool = true;
     if(button){

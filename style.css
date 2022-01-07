@@ -1,19 +1,18 @@
-*{  
+p, h1, h2, h3, h4, h5, h6, a, li, ul, span, div, article, main, aside, header, footer, body, input, form {  
     
-    background-color: rgb(63, 63, 63);
-    color: rgb(206, 207, 205);
+    background-color: rgb(48, 48, 48) !important;
+    color: rgb(221, 224, 218) !important;
 }
 #overlay {
     position: fixed; 
-    display: none; 
-    width: 100%; 
-    height: 100%;
+    display: block; 
+    width: 100vw; 
+    height: 100vh;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(185, 182, 6, 0.589); 
-    /* z-index: 1;  */
+    background-color: rgb(255, 255, 0); 
+    z-index: 1000;
+    opacity: 0.3;
     pointer-events: none; 
   }
   #btn{
